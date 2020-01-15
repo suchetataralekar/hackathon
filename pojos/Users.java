@@ -11,6 +11,7 @@ public class Users {
 	private String password;
 	private roleType role;
 	private Payments paymentId;
+	private IssueRecord issueRec;
 	
 	public Users() {
 		System.out.println("inside Users constructor..");
@@ -59,6 +60,7 @@ public class Users {
 		this.password = password;
 	}
 	@Enumerated(EnumType.STRING)
+	@Column(length = 30)
 	public roleType getRole() {
 		return role;
 	}
@@ -74,11 +76,22 @@ public class Users {
 	public void setPaymentId(Payments paymentId) {
 		this.paymentId = paymentId;
 	}
+	
+	
+	@OneToOne(mappedBy = "memberId", cascade = CascadeType.ALL, orphanRemoval = true)
+	public IssueRecord getIssueRec() {
+		return issueRec;
+	}
+	public void setIssueRec(IssueRecord issueRec) {
+		this.issueRec = issueRec;
+	}
+	
 	@Override
 	public String toString() {
 		return "Users [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", password=" + password
 				+ "]";
 	}
+
 	
 	
 	

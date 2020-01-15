@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @Entity
 public class Payments {
-
 	
 	private Integer	id;              
 	private Users user;           
