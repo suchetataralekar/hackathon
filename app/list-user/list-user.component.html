@@ -1,0 +1,18 @@
+
+
+
+
+<div class="table-responsive">
+    <table class="table">
+        <tr *ngFor="let u of user">
+            <td>{{u.id}} </td> 
+           <td>{{u.name}} </td> 
+           <td>{{u.email}} </td>
+           <td>{{u.phone}} </td>
+           <td>{{u.password}} </td>
+           <td>{{u.role}} </td>
+           <td><a routerLink="/editUser/{{u.id}}">Edit</a> </td>
+           <td><a routerLink="/delete/{{u.id}}">Delete</a> </td>
+        </tr>
+    </table>
+</div>

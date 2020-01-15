@@ -1,0 +1,26 @@
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+   
+  <ul class="nav navbar-nav">
+      <li class="active">
+          <a routerLink="/addBook">Add Book</a>
+      </li>
+      <li>
+          <a routerLink="/addMember">Add Members</a>
+      </li>
+      <li>
+          <a routerLink="/listUser">List Users</a>
+      </li>
+
+      <li>
+            <a routerLink="/editUser">Update Users</a>
+        </li>
+      
+      <li>  
+         <button type="button" (click)="logout()" class="btn btn-success">Lotout</button>
+         
+      </li>
+  </ul>
+</nav>
+<hr>
+<router-outlet></router-outlet>
